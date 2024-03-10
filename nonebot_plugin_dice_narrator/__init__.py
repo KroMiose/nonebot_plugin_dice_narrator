@@ -7,7 +7,7 @@ from nonebot_plugin_dice_narrator.matchers import register_matcher
 __plugin_meta__ = PluginMetadata(
     name="nonebot-plugin-dice-narrator",
     description="",
-    usage="",
+    usage="检定 逃离触手怪的追捕",
 )
 
 global_config = get_driver().config

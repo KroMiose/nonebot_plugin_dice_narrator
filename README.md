@@ -20,7 +20,9 @@ nb plugin install nonebot-plugin-dice-narrator
 
 向 Bot 发送 `检定 任务描述` (需要指令前缀)，Bot 会根据其描述指定一个检定难度，并给出结果。
 
-例如
+例如:
+
+![alt text](docs/images/example.png)
 
 ## 开发指南
 
