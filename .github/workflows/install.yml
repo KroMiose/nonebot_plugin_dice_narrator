@@ -2,8 +2,8 @@ name: Publish to PyPI
 
 on:
   push:
-    tags:
-      - v*.*.*
+    branches:
+      - main
 
 jobs:
   build-n-publish:
@@ -21,15 +21,3 @@ jobs:
       - name: Install Dependencies
         run: >-
           poetry install
-      - name: PyPI Setup
-        run: >-
-          poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
-      - name: Code Test
-        run: >-
-          poetry run test
-      - name: Build Package
-        run: >-
-          poetry run build
-      - name: Publish Package
-        run: >-
-          poetry run publish
