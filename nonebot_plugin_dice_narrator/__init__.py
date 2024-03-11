@@ -8,6 +8,7 @@ __plugin_meta__ = PluginMetadata(
     name="nonebot-plugin-dice-narrator",
     description="",
     usage="检定 逃离触手怪的追捕",
+    type="application",
 )
 
 global_config = get_driver().config

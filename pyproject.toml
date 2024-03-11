@@ -6,9 +6,6 @@ authors = ["KroMiose <li_xiangff@163.com>"]
 readme = "README.md"
 packages = [{ include = "nonebot_plugin_dice_narrator" }]
 repository = "https://github.com/KroMiose/nonebot-plugin-dice-narrator"
-classifiers = [
-    "Library :: Python Modules"
-]
 
 [tool.poetry.scripts]
 publish = "tools.run_publish:main"
@@ -27,13 +24,6 @@ nb-cli = "^1.4.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[project]
-name = "nonebot-plugin-dice-narrator"
-version = "0.1.0"
-description = "一只可爱的AI掷骰姬"
-readme = "README.md"
-requires-python = ">=3.9,<3.12"
 
 [tool.nonebot]
 adapters = [
