@@ -1,10 +1,24 @@
+<div align="center">
+  <a href="https://v2.nonebot.dev/store"><img src="https://github.com/KroMiose/nonebot_plugin_naturel_gpt/raw/main/image/README/nbp_logo.png" width="180" height="180" alt="NoneBotPluginLogo"></a>
+  <br>
+  <p><img src="https://github.com/KroMiose/nonebot_plugin_naturel_gpt/raw/main/image/README/NoneBotPlugin.svg" width="240" alt="NoneBotPluginText"></p>
+</div>
+
+<div align="center">
+    ✨ 一只可爱的 AI 掷骰姬! ✨<br/>
+    💬 技术交流/答疑/讨论 -> ：<a href="https://jq.qq.com/?_wv=1027&k=71t9iCT7">加入插件交流群-636925153</a> 🗨️ <br/>
+    <a href="https://pypi.org/project/nonebot-plugin-dice-narrator">
+        <img src="https://img.shields.io/pypi/v/nonebot-plugin-dice-narrator.svg" alt="pypi">
+    </a>
+    <img src="https://img.shields.io/badge/python-3.10+-6a9.svg" alt="python">
+    <a href="https://jq.qq.com/?_wv=1027&k=71t9iCT7">
+        <img src="https://img.shields.io/badge/加入交流群-636925153-c42.svg" alt="python">
+    </a>
+</div>
+
 # Dice Narrator
 
-## 介绍
-
-
-
-## 已实现工功能列表
+## 已实现功能列表
 
 - 基础检定: [Command: 检定]
 

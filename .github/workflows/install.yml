@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-n-publish:
-    name: Build and publish to PyPI
+    name: Run Install Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
