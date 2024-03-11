@@ -9,7 +9,7 @@ __plugin_meta__ = PluginMetadata(
     description="",
     usage="检定 逃离触手怪的追捕",
     type="application",
-    homepage="https://github.com/KroMiose/nonebot-plugin-dice-narrator",
+    homepage="https://github.com/KroMiose/nonebot_plugin_dice_narrator",
 )
 
 global_config = get_driver().config
