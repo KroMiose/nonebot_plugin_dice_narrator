@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{ include = "nonebot_plugin_dice_narrator" }]
 repository = "https://github.com/KroMiose/nonebot-plugin-dice-narrator"
 classifiers = [
-    "pyproject = library"
+    "Library :: Python Modules"
 ]
 
 [tool.poetry.scripts]
