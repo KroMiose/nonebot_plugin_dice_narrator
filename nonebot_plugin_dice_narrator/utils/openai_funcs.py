@@ -60,7 +60,7 @@ async def gen_chat_response_text(
         base_url=config.OPENAI_BASE_URL,
         http_client=(
             httpx.AsyncClient(
-                proxies=config.OPENAI_PROXY,
+                proxy=config.OPENAI_PROXY,
             )
             if config.OPENAI_PROXY
             else None
@@ -75,7 +75,6 @@ async def gen_chat_response_text(
         presence_penalty=presence_penalty,
         top_p=top_p,
     )
-    logger.info(res)
 
     output = res.choices[0].message.content
     token_consumption = res.usage.total_tokens if res.usage else -1
