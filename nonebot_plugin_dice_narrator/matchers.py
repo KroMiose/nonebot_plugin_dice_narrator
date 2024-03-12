@@ -1,7 +1,7 @@
 from typing import Type
 
 from nonebot import on_command
-from nonebot.adapters import Message
+from nonebot.adapters import Bot, Message
 from nonebot.adapters.onebot.v11 import (
     MessageEvent,
 )
@@ -11,6 +11,7 @@ from nonebot.params import CommandArg
 
 from nonebot_plugin_dice_narrator import config
 from nonebot_plugin_dice_narrator.narrator import run_narrator
+from nonebot_plugin_dice_narrator.utils.message_parse import gen_chat_text
 
 
 def register_matcher():
@@ -27,6 +28,7 @@ def register_matcher():
     async def _(
         matcher: Matcher,
         event: MessageEvent,
+        bot: Bot,
         arg: Message = CommandArg(),
     ):
         global is_progress  # 是否产生编辑进度
@@ -38,7 +40,8 @@ def register_matcher():
             )
 
         raw_cmd: str = arg.extract_plain_text()
-        logger.info(f"接收到指令: {raw_cmd}")
+        content, _ = await gen_chat_text(event=event, bot=bot)
+        logger.info(f"接收到指令: {raw_cmd} | Parsed: {content}")
 
         if raw_cmd:
-            await run_narrator(question=raw_cmd, matcher=matcher)
+            await run_narrator(question=content[2:].strip(), matcher=matcher)

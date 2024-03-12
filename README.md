@@ -38,6 +38,8 @@ nb plugin install nonebot-plugin-dice-narrator
 
 ![alt text](docs/images/example.png)
 
+> 注意: 你可以检定任意内容的文本，但不是所有文本都能得到良好的反馈，建议内容文本为一段可执行的任务，同时可以附上一些简要的任务背景概况；避免使用疑问句、无意义短句等意义不明的语句。
+
 ## 开发指南
 
 如果你想为 Dice Narrator 贡献代码，可以参考以下步骤：
