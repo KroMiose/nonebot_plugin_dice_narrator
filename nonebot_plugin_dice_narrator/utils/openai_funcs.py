@@ -10,7 +10,7 @@ from nonebot_plugin_dice_narrator.config import config
 
 __openai_version = pkg_resources.get_distribution("openai").version
 
-if __openai_version <= "0.28.0":
+if __openai_version <= "0.28.0":    # 低版本 openai 兼容
     openai.api_base = config.OPENAI_BASE_URL  # type: ignore
 else:
     from openai import AsyncOpenAI  # type: ignore
@@ -20,8 +20,11 @@ else:
 openai_key_idx = 0
 
 
-class RunOutOfKey(Exception):
-    pass
+class RunOutOfKeyException(Exception):
+    
+    def __init__(self, message: str = ""):
+        self.message = message
+        super().__init__(message)
 
 
 def _key_iterator_decorator(openai_req_func):
@@ -47,7 +50,7 @@ def _key_iterator_decorator(openai_req_func):
                     f"Failed to run {openai_req_func.__name__} with Exception: {e}",
                 )
         else:
-            raise RunOutOfKey
+            raise RunOutOfKeyException("Run out of API keys")
 
     return wrapper
 
