@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-dice-narrator"
-version = "0.1.8"
+version = "0.1.9"
 description = "一只可爱的AI掷骰姬"
 authors = ["KroMiose <li_xiangff@163.com>"]
 readme = "README.md"
