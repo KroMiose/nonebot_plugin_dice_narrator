@@ -11,7 +11,7 @@ class _Config(BaseModel):
 
 __plugin_meta__ = PluginMetadata(
     name="nonebot-plugin-dice-narrator",
-    description="",
+    description="一只可爱的 AI 掷骰姬，支持各种事件检定",
     usage="检定 逃离触手怪的追捕",
     type="application",
     homepage="https://github.com/KroMiose/nonebot_plugin_dice_narrator",
