@@ -9,6 +9,7 @@ repository = "https://github.com/KroMiose/nonebot-plugin-dice-narrator"
 
 [tool.poetry.scripts]
 publish = "tools.run_publish:main"
+bot = "run_bot:main"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"

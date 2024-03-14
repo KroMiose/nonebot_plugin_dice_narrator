@@ -23,6 +23,4 @@ jobs:
           poetry install
       - name: Plugin Load Test
         run: >-
-          pip3 install nb-cli &&
-          nb generate &&
-          python3 bot.py --load-test
+          poetry run bot --load-test
