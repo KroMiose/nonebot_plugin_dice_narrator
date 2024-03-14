@@ -1,3 +1,5 @@
+import sys
+
 from nonebot import get_driver
 from nonebot.plugin import PluginMetadata
 from pydantic import BaseModel
@@ -8,6 +10,7 @@ from nonebot_plugin_dice_narrator.matchers import register_matcher
 
 class _Config(BaseModel):
     pass
+
 
 __plugin_meta__ = PluginMetadata(
     name="nonebot-plugin-dice-narrator",
@@ -22,3 +25,7 @@ __plugin_meta__ = PluginMetadata(
 global_config = get_driver().config
 
 register_matcher()
+
+if "--load-test" in sys.argv:
+    print("Plugin load tested successfully")
+    exit(0)

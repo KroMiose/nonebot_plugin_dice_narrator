@@ -1,4 +1,4 @@
-name: Install Test
+name: Plugin Load Test
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-n-publish:
-    name: Run Install Test
+    name: Run Plugin Load Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -21,3 +21,7 @@ jobs:
       - name: Install Dependencies
         run: >-
           poetry install
+      - name: Plugin Load Test
+        run: >-
+          nb generate &&
+          python bot.py --load-test
