@@ -43,5 +43,9 @@ def register_matcher():
         content, _ = await gen_chat_text(event=event, bot=bot)
         logger.info(f"接收到指令: {raw_cmd} | Parsed: {content}")
 
+        for word in config.FORBIDDEN_WORDS:
+            if word in content:
+                return
+
         if raw_cmd:
             await run_narrator(question=content[2:].strip(), matcher=matcher)

@@ -4,8 +4,8 @@ from typing import List, Optional
 import miose_toolkit_common.config
 from miose_toolkit_common.config import Config, Env
 
-miose_toolkit_common.config._config_root = (  # noqa: SLF001
-    Path("./configs/nonebot_plugin_dice_narrator")
+miose_toolkit_common.config._config_root = Path(  # noqa: SLF001
+    "./configs/nonebot_plugin_dice_narrator",
 )
 
 
@@ -18,6 +18,10 @@ class PluginConfig(Config):
     DIFFICULTY_DICE_MAX: int = 20
 
     FORBIDDEN_USERS: List[str] = []
+    FORBIDDEN_WORDS: List[str] = []
+
+    FILTER_WORDS: List[str] = []
+    FILTER_PLACEHOLDER: str = "[数据删除]"
 
 
 config = PluginConfig().load_config(create_if_not_exists=True)

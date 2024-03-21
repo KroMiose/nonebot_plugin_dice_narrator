@@ -35,16 +35,21 @@ nb plugin install nonebot-plugin-dice-narrator
 插件配置文件路径: `./configs/nonebot_plugin_dice_narrator/config.dev.yaml` (启动一次服务后生成)，请根据以下配置文件修改配置。
 
 ```yaml
-OPENAI_API_KEYS:  # OpenAI API Key (可填多个*必须)
-- sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-OPENAI_BASE_URL: https://api.openai.com/v1  # OpenAI API Base URL 
+OPENAI_API_KEYS: # OpenAI API Key (可填多个*必须)
+  - sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  - sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  - sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+OPENAI_BASE_URL: https://api.openai.com/v1 # OpenAI API Base URL
 CHAT_MODEL: gpt-3.5-turbo # 使用的 Chat Model
-FORBIDDEN_USERS:  # 禁止交互的用户列表
-- 123456
+FORBIDDEN_USERS: # 禁止交互的用户列表
+  - 123456
 DIFFICULTY_DICE_MAX: 20 # 检定难度最大值 (即骰子面数)
-OPENAI_PROXY: null  # OpenAI 使用的代理
+OPENAI_PROXY: null # OpenAI 使用的代理FORBIDDEN_WORDS: []
+FORBIDDEN_WORDS: # 屏蔽词列表
+  - xxxxxx
+FILTER_WORDS: # 过滤词列表
+  - xxxxxx
+FILTER_PLACEHOLDER: "[数据删除]" # 过滤词替换占位符
 ```
 
 ## 使用
